@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="jQuery/jquery.mobile-1.1.0.min.css" />
 		<script type="text/javascript" src="jQuery/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript" src="jQuery/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript" src="js/underscore-min.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
 		<script type="text/javascript" src="js/datehelper.js"></script>
 	</head>
@@ -24,10 +25,19 @@
 				{
 					document.write("<p class=\"mid-screen\">No season data to report. <br/>Please create a New Season.</p>");
 				}
+				else
+				{
+					for (var i = 0; i < seasonData.length; i++)
+					{
+						// document.write("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
+						// document.write(seasonData[i].season);
+					}
+				}
 				</script>
 			</div>
 			
-			<div data-role="footer" data-position="fixed" data-id="myfooter">
+			<div data-role="footer" data-position="fixed" data-id="myfooter" class="ui-bar">
+				<a href="" onClick="clean_variables();" data-icon="gear">Dev Clean</a>
 				<h4>Dodgeball Statistics &copy; 2012 - Author Matthew Moody</h4>
 			</div>
 		</div>
