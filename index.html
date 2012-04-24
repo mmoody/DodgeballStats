@@ -13,26 +13,29 @@
 		<script type="text/javascript" src="js/datehelper.js"></script>
 	</head>
 	<body onload="launch_app();">
-		<div data-role="page">
+		<div data-role="page" id="home">
 			<div data-role="header" data-position="fixed">
 				<h1>Season Selection</h1>
 				<a href="screens/seasons.html" data-icon="plus" class="ui-btn-right">New Season</a>
 			</div>
 			
-			<div data-role="content">
+			<div data-role="content" id="main_content">
 				<script>
+				/*$('#home').live('pageinit',function(event){
 				if (seasonData == null)
 				{
-					document.write("<p class=\"mid-screen\">No season data to report. <br/>Please create a New Season.</p>");
+					$('#main_content').html("<p class=\"mid-screen\">No season data to report. <br/>Please create a New Season.</p>");
 				}
 				else
 				{
+					var test = $('#main_content');
+				
 					for (var i = 0; i < seasonData.length; i++)
 					{
-						// document.write("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
-						// document.write(seasonData[i].season);
+						$('#main_content').html("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
 					}
 				}
+				});*/
 				</script>
 			</div>
 			
