@@ -5,9 +5,9 @@
 		<h1>New Season</h1>
 	</div>
 	
-	<div data-role="content">
+	<div data-role="content" id="home">
 		<p class="mid-screen">Choose the information for the season</p>
-		<form name="new_season" action="return false;" method="POST">
+		<!--<form name="new_season" action="../index.html" method="POST">-->
 			<label for="select-season" class="select">Season:</label>
 			<select name="select-season" id="select-season_id">
 				<option value="winter">Winter</option>
@@ -23,9 +23,9 @@
 				<option value="2015">2015</option>
 			</select>
 			<br />
-			<input type="submit" value="Create Season" onClick="create_new_season(this.form);">
+			<a href="season_index.html" type="submit" onClick="create_new_season();">Create Season</a>
 			<br />
-		</form>
+		<!--</form>-->
 	</div>
 	
 	<div data-role="footer" data-position="fixed" data-id="myfooter">

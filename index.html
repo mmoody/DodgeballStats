@@ -12,37 +12,9 @@
 		<script type="text/javascript" src="js/global.js"></script>
 		<script type="text/javascript" src="js/datehelper.js"></script>
 	</head>
-	<body onload="launch_app();">
-		<div data-role="page" id="home">
-			<div data-role="header" data-position="fixed">
-				<h1>Season Selection</h1>
-				<a href="screens/seasons.html" data-icon="plus" class="ui-btn-right">New Season</a>
-			</div>
-			
-			<div data-role="content" id="main_content">
-				<script>
-				/*$('#home').live('pageinit',function(event){
-				if (seasonData == null)
-				{
-					$('#main_content').html("<p class=\"mid-screen\">No season data to report. <br/>Please create a New Season.</p>");
-				}
-				else
-				{
-					var test = $('#main_content');
-				
-					for (var i = 0; i < seasonData.length; i++)
-					{
-						$('#main_content').html("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
-					}
-				}
-				});*/
-				</script>
-			</div>
-			
-			<div data-role="footer" data-position="fixed" data-id="myfooter" class="ui-bar">
-				<a href="" onClick="clean_variables();" data-icon="gear">Dev Clean</a>
-				<h4>Dodgeball Statistics &copy; 2012 - Author Matthew Moody</h4>
-			</div>
+	<body>
+		<div data-role="page">
+			<script>$(document).ready(function(){ $.mobile.changePage('screens/season_index.html')});</script>
 		</div>
 	</body>
 </html>

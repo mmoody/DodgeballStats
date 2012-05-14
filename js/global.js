@@ -26,9 +26,9 @@ function clean_variables()
 	location.href = "index.html"
 }
 
-function create_new_season(form)
+function create_new_season()
 {
-	var new_season = { season: form['select-season'].value, year : form['select-year'].value };
+	var new_season = { season: $('#select-season_id')[0].value, year : $('#select-year_id')[0].value };
 	var duplicate = false;
 	
 	// Now add the new season
@@ -57,5 +57,20 @@ function create_new_season(form)
 	else
 	{
 		alert("Attempting to add same season twice. Fix this later.");
-	}	
+	}
+}
+
+function create_main_menu()
+{
+	if (seasonData == null)
+	{
+		$('#main_content').html("<p class=\"mid-screen\">No season data to report. <br/>Please create a New Season.</p>");
+	}
+	else
+	{
+		for (var i = 0; i < seasonData.length; i++)
+		{
+			$('#main_content').append("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
+		}
+	}
 }
