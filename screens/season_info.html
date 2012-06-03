@@ -1,12 +1,13 @@
 <div data-role="page" id="home">
-	<script>$.bind('pagebeforeshow', launch_app());</script>
 	<div data-role="header" data-position="fixed">
-		<h1>Season Selection</h1>
-		<a href="season_create.html" data-icon="plus" class="ui-btn-right">New Season</a>
+		<a href="season_index.html" data-icon="back" data-rel="back">Back</a>
+		<h1>Season Information</h1>
 	</div>
 	
 	<div data-role="content" id="main_content">
-		<script>$('#main_content').bind('pageshow', create_main_menu());</script>
+		<a href="roster_info.html" data-role="button" data-icon="grid">Season Roster</a>
+		<a href="season_matches.html" data-role="button" data-icon="star">Season Matches</a>
+		<a href="season_stats.html" data-role="button" data-icon="search">Season Statistics</a>
 	</div>
 	
 	<div data-role="footer" data-position="fixed" data-id="myfooter" class="ui-bar">

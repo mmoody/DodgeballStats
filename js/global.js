@@ -70,7 +70,7 @@ function create_main_menu()
 	{
 		for (var i = 0; i < seasonData.length; i++)
 		{
-			$('#main_content').append("<a href=\"season_data.html&s_id=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
+			$('#main_content').append("<a href=\"season_info.html\" onClick=\"localStorage.selectedSeason=" + i + "\" data-role=\"button\">" + seasonData[i].season + " " + seasonData[i].year + "</a>");
 		}
 	}
 }
